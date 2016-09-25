@@ -1,3 +1,18 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
+    }
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.14'
+}
+
+allprojects {
+    apply from: "$rootDir/gradle/common/dependencies.gradle"
 }

@@ -1,0 +1,10 @@
+apply plugin: "io.spring.dependency-management"
+
+dependencyManagement {
+    dependencies {
+        dependencySet(group:'org.jetbrains.kotlin', version: '1.0.4') {
+            entry 'kotlin-stdlib'
+            entry 'kotlin-reflect'
+        }
+    }
+}
