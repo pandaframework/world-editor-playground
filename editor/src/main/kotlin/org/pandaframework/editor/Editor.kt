@@ -11,7 +11,7 @@ import org.lwjgl.system.MemoryUtil.NULL
 /**
  * @author Ranie Jade Ramiso
  */
-class Application(val args: Array<String>) {
+class Editor(val args: Array<String>) {
     private val errorCallback = GLFWErrorCallback.createPrint(System.err)
 
     private val keyCallback: GLFWKeyCallback = GLFWKeyCallback.create { window, key, scanCode, action, mods ->
