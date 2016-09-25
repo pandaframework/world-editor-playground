@@ -6,5 +6,10 @@ dependencyManagement {
             entry 'kotlin-stdlib'
             entry 'kotlin-reflect'
         }
+
+        dependencySet(group: 'org.lwjgl', version: '3.0.0') {
+            entry 'lwjgl'
+            entry 'lwjgl-platform'
+        }
     }
 }

@@ -1,1 +1,13 @@
 apply from: "$rootDir/gradle/common/kotlin.gradle"
+
+dependencies {
+    compile 'org.lwjgl:lwjgl'
+
+    runtime group: 'org.lwjgl', name: 'lwjgl-platform', classifier: "natives-$target"
+}
+
+
+task run(type: JavaExec, dependsOn: [classes]) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.pandaframework.editor.MainKt'
+}
